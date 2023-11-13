@@ -10,6 +10,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     school_user_id = Column(String)
     capy_uuid = Column(String, nullable=False)
+    user_access = relationship("UserAccess", backref="user")
 
 
 class UserAccess(Base):
