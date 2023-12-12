@@ -16,7 +16,7 @@ class Election(Base):
     __tablename__ = 'election'
 
     id = Column(Integer, primary_key=True)
-    tribe_id = Column(Integer, ForeignKey("user.id"), nullable=False)
+    tribe_id = Column(Integer, ForeignKey("tribe.id"), nullable=False)
     time_start_collection = Column(DateTime, nullable=False, comment="Время начала выдвижения кандидатов")
     time_finish_collection = Column(DateTime, nullable=False, comment="Время окончания выдвижения кандидатов")
     time_start_voting = Column(DateTime, nullable=False, comment="Время начала голосования")
