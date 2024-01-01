@@ -14,4 +14,3 @@ class Capybara(Base):
     telegram_id = Column(Integer)
     key = Column(String, nullable=False)
     is_student = Column(Boolean, default=True)
-
