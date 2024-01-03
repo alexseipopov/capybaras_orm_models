@@ -42,5 +42,5 @@ class Friend(Base):
     peer_2 = Column(Integer, ForeignKey('user.id'))
 
     __table_args__ = (
-        CheckConstraint('peer_1 != peer_2', name='check_peer_ids_different')
+        CheckConstraint('peer_1 != peer_2', name='check_peer_ids_different'),
     )
