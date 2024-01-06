@@ -44,3 +44,12 @@ class Friend(Base):
     __table_args__ = (
         CheckConstraint('peer_1 != peer_2', name='check_peer_ids_different'),
     )
+
+
+class Rocket(Base):
+    __tablename__ = 'rocket'
+
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('user.id'))
+    rocket_id = Column(String, nullable=False, unique=True)
+    token = Column(String, nullable=False)
